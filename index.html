@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natalie International School</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">✦</span>
+                <span class="logo-text">Natalie's Studio</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#languages">Языки</a></li>
+                <li><a href="#pricing">Цены</a></li>
+                <li><a href="#phonetics">Фонетика</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="line">Изучай языки</span>
+                    <span class="line accent">с Natalie</span>
+                </h1>
+                <p class="hero-subtitle">Английский • Французский • Испанский • Немецкий</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Записаться
+                    </a>
+                    <a href="#languages" class="btn btn-secondary">
+                        <i class="fas fa-play"></i>
+                        Узнать больше
+                    </a>
+                </div>
+                <div class="hero-phone">
+                    <i class="fas fa-phone"></i>
+                    <span>89896147738</span>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <div class="card-icon">🇫🇷</div>
+                    <span>Français</span>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-icon">🇬🇧</div>
+                    <span>English</span>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="card-icon">🇪🇸</div>
+                    <span>Español</span>
+                </div>
+                <div class="floating-card card-4">
+                    <div class="card-icon">🇩🇪</div>
+                    <span>Deutsch</span>
+                </div>
+                <div class="globe-container">
+                    <div class="globe-wrapper">
+                        <div class="globe"></div>
+                        <div class="orbit orbit-1">
+                            <div class="orbit-dot"></div>
+                        </div>
+                        <div class="orbit orbit-2">
+                            <div class="orbit-dot orbit-dot-2"></div>
+                        </div>
+                    </div>
+                    <div class="globe-glow"></div>
+                    <div class="stars">
+                        <div class="star"></div>
+                        <div class="star"></div>
+                        <div class="star"></div>
+                        <div class="star"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Листай вниз</span>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="languages">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Наши курсы</span>
+                <h2 class="section-title">Выбери свой язык</h2>
+                <p class="section-desc">Онлайн и офлайн занятия (ул Зявкина, 31)</p>
+            </div>
+            <div class="languages-grid">
+                <div class="language-card" data-lang="english">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <span class="flag">🇬🇧</span>
+                        <h3>Английский</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>От начального до продвинутого уровня. Британский и американский английский.</p>
+                        <div class="card-features">
+                            <span><i class="fas fa-clock"></i> 45-75 мин</span>
+                            <span><i class="fas fa-users"></i> 1-5 чел</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#contact" class="card-btn">Записаться <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="language-card" data-lang="french">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <span class="flag">🇫🇷</span>
+                        <h3>Французский</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Язык любви и культуры. От базового до уровня C1.</p>
+                        <div class="card-features">
+                            <span><i class="fas fa-clock"></i> 45-75 мин</span>
+                            <span><i class="fas fa-users"></i> 1-5 чел</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#contact" class="card-btn">Записаться <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="language-card" data-lang="spanish">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <span class="flag">🇪🇸</span>
+                        <h3>Испанский</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Страстный язык для путешествий и бизнеса.</p>
+                        <div class="card-features">
+                            <span><i class="fas fa-clock"></i> 45-75 мин</span>
+                            <span><i class="fas fa-users"></i> 1-5 чел</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#contact" class="card-btn">Записаться <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="language-card" data-lang="german">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <span class="flag">🇩🇪</span>
+                        <h3>Немецкий</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Язык для профессионального развития и учёбы.</p>
+                        <div class="card-features">
+                            <span><i class="fas fa-clock"></i> 45-75 мин</span>
+                            <span><i class="fas fa-users"></i> 1-5 чел</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#contact" class="card-btn">Записаться <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Тарифы</span>
+                <h2 class="section-title">Стоимость занятий</h2>
+                <p class="section-desc">Длительность: от 45 мин до 75 мин</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="pricing-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3>Индивидуально</h3>
+                        <div class="pricing-price">
+                            <span class="amount">2 800</span>
+                            <span class="currency">руб</span>
+                            <span class="period">/ 60 мин</span>
+                        </div>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 1 раз в неделю</li>
+                            <li><i class="fas fa-check"></i> Персональный подход</li>
+                            <li><i class="fas fa-check"></i> Гибкий график</li>
+                            <li><i class="fas fa-check"></i> Все уровни</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="#contact" class="btn btn-primary">Записаться</a>
+                    </div>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Популярный</div>
+                    <div class="pricing-header">
+                        <div class="pricing-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>В группе</h3>
+                        <div class="pricing-price">
+                            <span class="amount">1 000</span>
+                            <span class="currency">руб</span>
+                            <span class="period">/ 75 мин</span>
+                        </div>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 2 раза в неделю</li>
+                            <li><i class="fas fa-check"></i> Группа 2-5 человек</li>
+                            <li><i class="fas fa-check"></i> Разговорная практика</li>
+                            <li><i class="fas fa-check"></i> Дружеская атмосфера</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="#contact" class="btn btn-primary">Записаться</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pricing-note">
+                <i class="fas fa-info-circle"></i>
+                <p>Оплата за абонемент на 8 занятий вперед за месяц.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phonetics Section -->
+    <section id="phonetics" class="phonetics">
+        <div class="container">
+            <div class="phonetics-content">
+                <div class="phonetics-text">
+                    <span class="section-badge">Спецкурс</span>
+                    <h2 class="section-title">Фонетический курс</h2>
+                    <h3 class="phonetics-subtitle">Постановка британского акцента</h3>
+                    <p>Видеоуроки с практическими заданиями и обратной связью + занятия в группе и индивидуально</p>
+                    <ul class="phonetics-features">
+                        <li><i class="fas fa-video"></i> Видеоуроки</li>
+                        <li><i class="fas fa-tasks"></i> Практические задания</li>
+                        <li><i class="fas fa-comments"></i> Обратная связь</li>
+                        <li><i class="fas fa-user-friends"></i> Групповые занятия</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-star"></i>
+                        Записаться на курс
+                    </a>
+                </div>
+                <div class="phonetics-visual">
+                    <div class="phonetics-card">
+                        <div class="phonetics-icon">
+                            <i class="fas fa-microphone-alt"></i>
+                        </div>
+                        <span>British Accent</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telegram Section -->
+    <section class="telegram">
+        <div class="container">
+            <div class="telegram-content">
+                <div class="telegram-icon">
+                    <i class="fab fa-telegram-plane"></i>
+                </div>
+                <h2>Бесплатная подписка на ТГ-канал</h2>
+                <p>для ежедневной практики языка</p>
+                <div class="telegram-channels">
+                    <a href="https://t.me/trilingual_natalie" target="_blank" class="telegram-btn">
+                        <i class="fab fa-telegram-plane"></i>
+                        <span>Английский</span>
+                        <span class="channel-name">@trilingual_natalie</span>
+                    </a>
+                    <a href="https://t.me/frenchC1" target="_blank" class="telegram-btn">
+                        <i class="fab fa-telegram-plane"></i>
+                        <span>Французский</span>
+                        <span class="channel-name">@frenchC1</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Контакты</span>
+                <h2 class="section-title">Свяжитесь с нами</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Телефон</h3>
+                    <a href="tel:89896147738">89896147738</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <a href="mailto:zelenskayanatalia55@gmail.com">zelenskayanatalia55@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Адрес</h3>
+                    <p>ул Зявкина, 31</p>
+                </div>
+            </div>
+            <div class="contact-form-wrapper">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Ваш телефон" required>
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Выберите язык</option>
+                            <option value="english">Английский</option>
+                            <option value="french">Французский</option>
+                            <option value="spanish">Испанский</option>
+                            <option value="german">Немецкий</option>
+                            <option value="phonetics">Фонетический курс</option>
+                        </select>
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Формат занятий</option>
+                            <option value="individual">Индивидуально</option>
+                            <option value="group">В группе</option>
+                        </select>
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i>
+                        Отправить заявку
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">✦</span>
+                <span class="logo-text">Natalie International School</span>
+                    <p>Изучай языки с удовольствием!</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://t.me/trilingual_natalie" target="_blank">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                    <a href="https://t.me/frenchC1" target="_blank">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                    <a href="mailto:zelenskayanatalia55@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:89896147738">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Natalie International School. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
