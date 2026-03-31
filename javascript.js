@@ -96,17 +96,45 @@ function initForm() {
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Отправка...';
         btn.disabled = true;
 
-        setTimeout(() => {
-            btn.innerHTML = '<i class="fas fa-check"></i> Отправлено!';
-            btn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+        const formData = new FormData(form);
 
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+        })
+        .then(response => {
+            if (response.ok) {
+                btn.innerHTML = '<i class="fas fa-check"></i> Отправлено!';
+                btn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+                form.reset();
+                document.querySelectorAll('.custom-select').forEach(s => s.classList.remove('open'));
+                document.querySelectorAll('.custom-option').forEach(o => o.classList.remove('selected'));
+                document.querySelectorAll('.custom-select-trigger span').forEach(span => {
+                    const defaults = { 'language': 'Выберите язык', 'format': 'Формат занятий' };
+                    const name = span.closest('.custom-select')?.dataset.name;
+                    if (name && defaults[name]) span.textContent = defaults[name];
+                });
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.background = '';
+                    btn.disabled = false;
+                }, 3000);
+            } else {
+                btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Ошибка';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                }, 2000);
+            }
+        })
+        .catch(() => {
+            btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Ошибка';
             setTimeout(() => {
                 btn.innerHTML = originalText;
-                btn.style.background = '';
                 btn.disabled = false;
-                form.reset();
             }, 2000);
-        }, 1500);
+        });
     });
 }
 
@@ -276,6 +304,44 @@ function initParallax() {
     });
 }
 
+// ===== CUSTOM SELECT DROPDOWNS =====
+function initCustomSelects() {
+    document.querySelectorAll('.custom-select').forEach(select => {
+        const trigger = select.querySelector('.custom-select-trigger');
+        const options = select.querySelector('.custom-select-options');
+        const hiddenInput = select.parentElement.querySelector('input[type="hidden"]');
+
+        trigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            document.querySelectorAll('.custom-select').forEach(s => {
+                if (s !== select) s.classList.remove('open');
+            });
+            select.classList.toggle('open');
+        });
+
+        options.querySelectorAll('.custom-option').forEach(option => {
+            option.addEventListener('click', () => {
+                const value = option.dataset.value;
+                const text = option.textContent;
+
+                trigger.querySelector('span').textContent = text;
+                trigger.style.color = 'var(--dark)';
+
+                options.querySelectorAll('.custom-option').forEach(o => o.classList.remove('selected'));
+                option.classList.add('selected');
+
+                if (hiddenInput) hiddenInput.value = value;
+
+                select.classList.remove('open');
+            });
+        });
+    });
+
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.custom-select').forEach(s => s.classList.remove('open'));
+    });
+}
+
 // ===== INITIALIZE =====
 document.addEventListener('DOMContentLoaded', () => {
     initMobileNav();
@@ -287,7 +353,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // initCursorGlow();
     initActiveNavLink();
     initParallax();
+    initCustomSelects();
+    alignSubtextToSubtitle();
 
     window.addEventListener('scroll', handleNavbarScroll);
     handleNavbarScroll();
 });
+
+function alignSubtextToSubtitle() {
+    const sub = document.querySelector('.hero-subtext');
+    const under = sub;
+    if (!sub) return;
+    // Align to the width of the main heading (.hero-title)
+    const title = document.querySelector('.hero-title');
+    if (title) {
+        under.style.width = title.offsetWidth + 'px';
+    }
+}
+window.addEventListener('resize', alignSubtextToSubtitle);
