@@ -29,18 +29,29 @@ function handleNavbarScroll() {
 function initMobileNav() {
     const toggle = document.getElementById('navToggle');
     const navLinks = document.querySelector('.nav-links');
+    const overlay = document.getElementById('navOverlay');
+
+    function closeNav() {
+        toggle.classList.remove('active');
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
+    }
 
     toggle.addEventListener('click', () => {
-        toggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
+        const isOpen = navLinks.classList.contains('active');
+        if (isOpen) {
+            closeNav();
+        } else {
+            toggle.classList.add('active');
+            navLinks.classList.add('active');
+            overlay.classList.add('active');
+        }
     });
 
-    // Close nav on link click
+    overlay.addEventListener('click', closeNav);
+
     navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            toggle.classList.remove('active');
-            navLinks.classList.remove('active');
-        });
+        link.addEventListener('click', closeNav);
     });
 }
 
