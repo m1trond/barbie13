@@ -2,7 +2,8 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#E85D75">
     <title>Natalie Languages — Курсы английского, французского, испанского и немецкого</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -12,8 +13,8 @@
     <nav class="nav">
         <div class="container">
             <div class="nav-wrapper">
-                <a href="#top" class="logo">Natalie<span class="logo-accent">.</span></a>
-                <button class="menu-toggle" id="menuToggle">
+                <a href="#top" class="logo" aria-label="На главную">Natalie<span class="logo-accent">.</span></a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -29,24 +30,27 @@
         </div>
     </nav>
 
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-content">
-        <div class="hero-badge">Онлайн & Офлайн</div>
-        <h1 class="hero-title">
-            Изучай языки<br>
-            <span class="text-pink">с удовольствием</span>
-        </h1>
-        <p class="hero-subtitle">
-            Английский, французский, испанский и немецкий<br>
-            для начинающих и продвинутых
-        </p>
-        <div class="hero-buttons">
-            <a href="#contacts" class="btn btn-primary">Записаться</a>
-            <a href="#formats" class="btn btn-outline">Узнать цены</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">Онлайн & Офлайн</div>
+                <h1 class="hero-title">
+                    Изучай языки<br>
+                    <span class="text-pink">с удовольствием</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Английский, французский, испанский и немецкий<br>
+                    для начинающих и продвинутых
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contacts" class="btn btn-primary">Записаться</a>
+                    <a href="#formats" class="btn btn-outline">Узнать цены</a>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Languages Grid -->
     <section id="languages" class="languages">
@@ -60,7 +64,7 @@
                         <span class="lang-badge">Популярное</span>
                     </div>
                     <div class="lang-image">
-                        <img src="images/books.png" alt="English">
+                        <img src="images/books.png" alt="English" loading="lazy">
                     </div>
                 </div>
                 <div class="lang-card">
@@ -69,7 +73,7 @@
                         <p>Изучай язык любви с носителем</p>
                     </div>
                     <div class="lang-image">
-                        <img src="images/croissant-coffee.png" alt="French">
+                        <img src="images/croissant-coffee.png" alt="French" loading="lazy">
                     </div>
                 </div>
                 <div class="lang-card">
@@ -78,7 +82,7 @@
                         <p>Выучи испанский для путешествий и работы. Живая разговорная практика</p>
                     </div>
                     <div class="lang-image">
-                        <img src="images/boobs.png" alt="Spanish">
+                        <img src="images/boobs.png" alt="Spanish" loading="lazy">
                     </div>
                 </div>
                 <div class="lang-card lang-card-wide">
@@ -87,7 +91,7 @@
                         <p>Выучи немецкий для путешествий и саморазвития</p>
                     </div>
                     <div class="lang-image">
-                        <img src="images/phone-speech.png" alt="German">
+                        <img src="images/phone-speech.png" alt="German" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -110,15 +114,17 @@
                         <h3>Индивидуально</h3>
                     </div>
                     <div class="format-body">
-                        <div class="price">2 800 ₽</div>
-                        <span class="price-time">/ 60 мин</span>
+                        <div class="price-row">
+                            <div class="price">2 800 ₽</div>
+                            <span class="price-time">/ 60 мин</span>
+                        </div>
                         <ul class="format-features">
                             <li>Персональная программа</li>
                             <li>Гибкий график</li>
                             <li>1 раз в неделю</li>
                             <li>Длительность: 45-75 мин</li>
                         </ul>
-                        <a href="#contacts" class="btn btn-secondary" style="margin-top: 20px; display: inline-block;">Записаться</a>
+                        <a href="#contacts" class="btn btn-secondary">Записаться</a>
                     </div>
                 </div>
 
@@ -136,22 +142,24 @@
                         <h3>В группе</h3>
                     </div>
                     <div class="format-body">
-                        <div class="price">1 000 ₽</div>
-                        <span class="price-time">/ 75 мин</span>
+                        <div class="price-row">
+                            <div class="price">1 000 ₽</div>
+                            <span class="price-time">/ 75 мин</span>
+                        </div>
                         <ul class="format-features">
                             <li>2-5 человек в группе</li>
                             <li>Командная работа</li>
                             <li>2 раза в неделю</li>
                             <li>Длительность: 75 мин</li>
                         </ul>
-                        <a href="#contacts" class="btn btn-secondary" style="margin-top: 20px; display: inline-block;">Записаться</a>
+                        <a href="#contacts" class="btn btn-secondary">Записаться</a>
                     </div>
                 </div>
             </div>
 
             <div class="payment-info">
                 <div class="payment-card">
-                    <img src="images/clipboard.png" alt="Payment">
+                    <img src="images/clipboard.png" alt="Payment" loading="lazy">
                     <div class="payment-text">
                         <h4>Оплата абонементом</h4>
                         <p>8 занятий вперед за месяц.<br>Адрес офлайн-занятий: ул. Зявкина, 31</p>
@@ -176,7 +184,7 @@
                     <a href="#contacts" class="btn btn-primary">Хочу говорить как британец</a>
                 </div>
                 <div class="english-visual">
-                    <img src="images/voice.png" alt="Voice" class="voice-img">
+                    <img src="images/voice.png" alt="Voice" class="voice-img" loading="lazy">
                 </div>
             </div>
         </div>
@@ -189,13 +197,15 @@
             <p class="section-subtitle">Подпишись на Telegram-каналы для ежедневной практики языка</p>
             
             <div class="telegram-grid">
-                <a href="https://t.me/trilingual_natalie" target="_blank" class="telegram-card tg-english">
+                <a href="https://t.me/trilingual_natalie" target="_blank" class="telegram-card tg-english" rel="noopener">
+                    <div class="telegram-icon">🇬🇧</div>
                     <h3>Английский</h3>
                     <p>@trilingual_natalie</p>
                     <span class="telegram-link">Подписаться →</span>
                 </a>
                 
-                <a href="https://t.me/frenchC1" target="_blank" class="telegram-card tg-french">
+                <a href="https://t.me/frenchC1" target="_blank" class="telegram-card tg-french" rel="noopener">
+                    <div class="telegram-icon">🇫🇷</div>
                     <h3>Французский</h3>
                     <p>@frenchC1</p>
                     <span class="telegram-link">Подписаться →</span>
@@ -232,16 +242,16 @@
 
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
-                        <label>Имя</label>
-                        <input type="text" placeholder="Как тебя зовут?" required>
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" placeholder="Как тебя зовут?" required autocomplete="name">
                     </div>
                     <div class="form-group">
-                        <label>Телефон</label>
-                        <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
                     </div>
                     <div class="form-group">
-                        <label>Язык</label>
-                        <select required>
+                        <label for="lang">Язык</label>
+                        <select id="lang" required>
                             <option value="">Выбери язык</option>
                             <option value="english">Английский</option>
                             <option value="french">Французский</option>
@@ -250,8 +260,8 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Формат</label>
-                        <select required>
+                        <label for="format">Формат</label>
+                        <select id="format" required>
                             <option value="">Выбери формат</option>
                             <option value="individual">Индивидуально</option>
                             <option value="group">В группе</option>
@@ -267,37 +277,42 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="#top" class="logo">Natalie<span class="logo-accent">.</span></a>
-                    <p>Языковые курсы с душой. Учи английский, французский, испанский и немецкий с удовольствием!</p>
-                    <div class="footer-social">
-                        <a href="https://t.me/trilingual_natalie" target="_blank">Telegram</a>
-                        <a href="tel:89896147738">8 (989) 614-77-38</a>
-                    </div>
-                </div>
-                <div class="footer-contact">
-                    <h4>Контакты</h4>
-                    <p>ул. Зявкина, 31</p>
-                    <p>8 (989) 614-77-38</p>
-                    <p>zelenskayanatalia55@gmail.com</p>
-                </div>
-                <div class="footer-info">
-                    <h4>Информация</h4>
-                    <a href="#languages">Языки</a>
-                    <a href="#formats">Форматы занятий</a>
-                    <a href="#contacts">Записаться</a>
-                    <a href="privacy-policy.html" target="_blank">Политика конфиденциальности</a>
-                </div>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- СНАЧАЛА КОНТАКТЫ -->
+            <div class="footer-contact">
+                <h4>Контакты</h4>
+                <p>ул. Зявкина, 31</p>
+                <p>8 (989) 614-77-38</p>
+                <p>zelenskayanatalia55@gmail.com</p>
             </div>
-            <div class="footer-bottom">
-                <p>© 2026 Natalie Languages. Все права защищены.</p>
+            
+            <!-- ПОТОМ ИНФОРМАЦИЯ -->
+            <div class="footer-info">
+                <h4>Информация</h4>
+                <a href="#languages">Языки</a>
+                <a href="#formats">Форматы занятий</a>
+                <a href="#contacts">Записаться</a>
+                <a href="privacy-policy.html" target="_blank">Политика конфиденциальности</a>
+            </div>
+            
+            <!-- В КОНЦЕ БРЕНД -->
+            <div class="footer-brand">
+                <a href="#top" class="logo">Natalie<span class="logo-accent">.</span></a>
+                <p>Языковые курсы с душой. Учи английский, французский, испанский и немецкий с удовольствием!</p>
+                <div class="footer-social">
+                    <a href="https://t.me/trilingual_natalie" target="_blank" rel="noopener">Telegram</a>
+                    <a href="tel:89896147738">8 (989) 614-77-38</a>
+                </div>
             </div>
         </div>
-    </footer>
+        <div class="footer-bottom">
+            <p>© 2026 Natalie Languages. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
 
     <script src="javascript.js"></script>
 </body>
