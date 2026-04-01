@@ -3,330 +3,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natalie's School</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='50' text-anchor='middle' dominant-baseline='central' font-size='80'>✦</text></svg>">
+    <title>Natalie Languages — Курсы английского, французского, испанского и немецкого</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-
-
+<body id="top">
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="logo">
-                <span class="logo-icon">✦</span>
-                <span class="logo-text">Natalie's School</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="tel:89896147738" class="nav-phone">8 (989) 614-77-38</a></li>
-                <li><a href="#languages">Языки</a></li>
-                <li><a href="#pricing">Цены</a></li>
-                <li><a href="#phonetics">Спецкурс</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#top" class="logo">Natalie<span class="logo-accent">.</span></a>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#languages">Языки</a></li>
+                    <li><a href="#formats">Форматы</a></li>
+                    <li><a href="#english">Спецкурс</a></li>
+                    <li><a href="#telegram">Telegram</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <div class="nav-overlay" id="navOverlay"></div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-bg-overlay"></div>
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="line">Изучай</span>
-                    <span class="line accent">иностранные</span>
-                    <span class="line">языки</span>
-                </h1>
-                <p class="hero-subtitle">Английский <span class="dot">·</span> Французский <span class="dot">·</span> Испанский <span class="dot">·</span> Немецкий</p>
-                <p class="hero-subtext">Наш сайт предлагает онлайн и офлайн занятия, гибкие расписания и индивидуальный подход к каждому ученику. Присоединяйтесь к нам, чтобы начать говорить на иностранном языке уже сегодня.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-star"></i>
-                        Записаться
-                    </a>
-                    <a href="#languages" class="btn btn-secondary">
-                        Подробнее
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="hero-quote">
-                    <i class="fas fa-quote-left"></i>
-                    <p>Каждый новый язык открывает дверь в новый мир. Начни своё путешествие прямо сейчас.</p>
-                </div>
-            </div>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-badge">Онлайн & Офлайн</div>
+        <h1 class="hero-title">
+            Изучай языки<br>
+            <span class="text-pink">с удовольствием</span>
+        </h1>
+        <p class="hero-subtitle">
+            Английский, французский, испанский и немецкий<br>
+            для начинающих и продвинутых
+        </p>
+        <div class="hero-buttons">
+            <a href="#contacts" class="btn btn-primary">Записаться</a>
+            <a href="#formats" class="btn btn-outline">Узнать цены</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Languages Section -->
+    <!-- Languages Grid -->
     <section id="languages" class="languages">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Наши курсы</span>
-                <h2 class="section-title">Выбери свой язык</h2>
-                <p class="section-desc">Онлайн и офлайн занятия (ул Зявкина, 31)</p>
-            </div>
+            <h2 class="section-title">Выбери свой <span class="text-red">язык</span></h2>
             <div class="languages-grid">
-                <div class="language-card" data-lang="english">
-                    <div class="card-glow"></div>
-                    <div class="card-header">
-                        <img src="images/us.svg" alt="UK" class="flag-img">
+                <div class="lang-card lang-card-large">
+                    <div class="lang-content">
                         <h3>Английский</h3>
+                        <p>Фонетический курс по постановке британского акцента. Видеоуроки с практическими заданиями и обратной связью</p>
+                        <span class="lang-badge">Популярное</span>
                     </div>
-                    <div class="card-body">
-                        <p>Все уровни: от A1 до C2. Британский и американский английский.</p>
-                        <div class="card-features">
-                            <span><i class="fas fa-clock"></i> 45-75 мин</span>
-                            <span><i class="fas fa-users"></i> 1-5 чел</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#contact" class="card-btn">Записаться <i class="fas fa-arrow-right"></i></a>
+                    <div class="lang-image">
+                        <img src="images/books.png" alt="English">
                     </div>
                 </div>
-                <div class="language-card" data-lang="french">
-                    <div class="card-glow"></div>
-                    <div class="card-header">
-                        <img src="images/fr.svg" alt="FR" class="flag-img">
+                <div class="lang-card">
+                    <div class="lang-content">
                         <h3>Французский</h3>
+                        <p>Изучай язык любви с носителем</p>
                     </div>
-                    <div class="card-body">
-                        <p>Язык любви и культуры. От базового до уровня C1.</p>
-                        <div class="card-features">
-                            <span><i class="fas fa-clock"></i> 45-75 мин</span>
-                            <span><i class="fas fa-users"></i> 1-5 чел</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#contact" class="card-btn">Записаться <i class="fas fa-arrow-right"></i></a>
+                    <div class="lang-image">
+                        <img src="images/croissant-coffee.png" alt="French">
                     </div>
                 </div>
-                <div class="language-card" data-lang="spanish">
-                    <div class="card-glow"></div>
-                    <div class="card-header">
-                        <img src="images/es.svg" alt="ES" class="flag-img">
+                <div class="lang-card">
+                    <div class="lang-content">
                         <h3>Испанский</h3>
+                        <p>Выучи испанский для путешествий и работы. Живая разговорная практика</p>
                     </div>
-                    <div class="card-body">
-                        <p>Страстный язык для путешествий и бизнеса.</p>
-                        <div class="card-features">
-                            <span><i class="fas fa-clock"></i> 45-75 мин</span>
-                            <span><i class="fas fa-users"></i> 1-5 чел</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#contact" class="card-btn">Записаться <i class="fas fa-arrow-right"></i></a>
+                    <div class="lang-image">
+                        <img src="images/boobs.png" alt="Spanish">
                     </div>
                 </div>
-                <div class="language-card" data-lang="german">
-                    <div class="card-glow"></div>
-                    <div class="card-header">
-                        <img src="images/de.svg" alt="DE" class="flag-img">
+                <div class="lang-card lang-card-wide">
+                    <div class="lang-content">
                         <h3>Немецкий</h3>
+                        <p>Выучи немецкий для путешествий и саморазвития</p>
                     </div>
-                    <div class="card-body">
-                        <p>Язык для профессионального развития и учёбы.</p>
-                        <div class="card-features">
-                            <span><i class="fas fa-clock"></i> 45-75 мин</span>
-                            <span><i class="fas fa-users"></i> 1-5 чел</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#contact" class="card-btn">Записаться <i class="fas fa-arrow-right"></i></a>
+                    <div class="lang-image">
+                        <img src="images/phone-speech.png" alt="German">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
+    <!-- Formats & Prices -->
+    <section id="formats" class="formats">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Тарифы</span>
-                <h2 class="section-title">Стоимость занятий</h2>
-                <p class="section-desc">Длительность: от 45 мин до 75 мин</p>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <div class="pricing-icon">
-                            <i class="fas fa-user"></i>
+            <h2 class="section-title">Форматы <span style="color: #2D3436;">занятий</span></h2>
+            <div class="formats-wrapper">
+                <div class="format-card format-individual">
+                    <div class="format-header">
+                        <div class="format-icon">
+                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#2D3436" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
                         </div>
                         <h3>Индивидуально</h3>
-                        <div class="pricing-price">
-                            <span class="amount">2 800</span>
-                            <span class="currency">руб</span>
-                            <span class="period">/ 60 мин</span>
-                        </div>
                     </div>
-                    <div class="pricing-body">
-                        <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> 1 раз в неделю</li>
-                            <li><i class="fas fa-check"></i> Персональный подход</li>
-                            <li><i class="fas fa-check"></i> Гибкий график</li>
-                            <li><i class="fas fa-check"></i> Все уровни</li>
+                    <div class="format-body">
+                        <div class="price">2 800 ₽</div>
+                        <span class="price-time">/ 60 мин</span>
+                        <ul class="format-features">
+                            <li>Персональная программа</li>
+                            <li>Гибкий график</li>
+                            <li>1 раз в неделю</li>
+                            <li>Длительность: 45-75 мин</li>
                         </ul>
-                    </div>
-                    <div class="pricing-footer">
-                        <a href="#contact" class="btn btn-primary">Записаться</a>
+                        <a href="#contacts" class="btn btn-secondary" style="margin-top: 20px; display: inline-block;">Записаться</a>
                     </div>
                 </div>
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">Популярный</div>
-                    <div class="pricing-header">
-                        <div class="pricing-icon">
-                            <i class="fas fa-users"></i>
+
+                <div class="format-card format-group">
+                    <div class="format-badge">Выгодно</div>
+                    <div class="format-header">
+                        <div class="format-icon">
+                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#2D3436" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
                         </div>
                         <h3>В группе</h3>
-                        <div class="pricing-price">
-                            <span class="amount">1 000</span>
-                            <span class="currency">руб</span>
-                            <span class="period">/ 75 мин</span>
-                        </div>
                     </div>
-                    <div class="pricing-body">
-                        <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> 2 раза в неделю</li>
-                            <li><i class="fas fa-check"></i> Группа 2-5 человек</li>
-                            <li><i class="fas fa-check"></i> Разговорная практика</li>
-                            <li><i class="fas fa-check"></i> Дружеская атмосфера</li>
+                    <div class="format-body">
+                        <div class="price">1 000 ₽</div>
+                        <span class="price-time">/ 75 мин</span>
+                        <ul class="format-features">
+                            <li>2-5 человек в группе</li>
+                            <li>Командная работа</li>
+                            <li>2 раза в неделю</li>
+                            <li>Длительность: 75 мин</li>
                         </ul>
-                    </div>
-                    <div class="pricing-footer">
-                        <a href="#contact" class="btn btn-primary">Записаться</a>
+                        <a href="#contacts" class="btn btn-secondary" style="margin-top: 20px; display: inline-block;">Записаться</a>
                     </div>
                 </div>
             </div>
-            <div class="pricing-note">
-                <i class="fas fa-info-circle"></i>
-                <p>Оплата за абонемент на 8 занятий вперед за месяц.</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Phonetics Section -->
-    <section id="phonetics" class="phonetics">
-        <div class="container">
-            <div class="phonetics-content">
-                <div class="phonetics-text">
-                    <span class="section-badge">Спецкурс</span>
-                    <h2 class="section-title">Фонетический курс</h2>
-                    <h3 class="phonetics-subtitle">Английский: постановка британского акцента</h3>
-                    <p>Видеоуроки с практическими заданиями и обратной связью + занятия в группе и индивидуально</p>
-                    <ul class="phonetics-features">
-                        <li><i class="fas fa-video"></i> Видеоуроки</li>
-                        <li><i class="fas fa-tasks"></i> Практические задания</li>
-                        <li><i class="fas fa-comments"></i> Обратная связь</li>
-                        <li><i class="fas fa-user-friends"></i> Групповые занятия</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-star"></i>
-                        Записаться на курс
-                    </a>
-                </div>
-                <div class="phonetics-visual">
-                    <div class="phonetics-card">
-                        <div class="phonetics-icon">
-                            <i class="fas fa-microphone-alt"></i>
-                        </div>
-                        <span>British Accent</span>
+            <div class="payment-info">
+                <div class="payment-card">
+                    <img src="images/clipboard.png" alt="Payment">
+                    <div class="payment-text">
+                        <h4>Оплата абонементом</h4>
+                        <p>8 занятий вперед за месяц.<br>Адрес офлайн-занятий: ул. Зявкина, 31</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Telegram Section -->
-    <section class="telegram">
+    <!-- English Special -->
+    <section id="english" class="english-special">
         <div class="container">
-            <div class="telegram-content">
-                <div class="telegram-icon">
-                    <i class="fab fa-telegram-plane"></i>
+            <div class="english-wrapper">
+                <div class="english-content">
+                    <div class="english-badge">Спецкурс</div>
+                    <h2>Британский акцент</h2>
+                    <p class="english-subtitle">Фонетический курс</p>
+                    <p class="english-text">
+                        Видеоуроки с практическими заданиями и обратной связью + 
+                        занятия в группе и индивидуально. Поставь произношение как у носителя!
+                    </p>
+                    <a href="#contacts" class="btn btn-primary">Хочу говорить как британец</a>
                 </div>
-                <h2>Бесплатная подписка на ТГ-канал</h2>
-                <p>для ежедневной практики языка</p>
-                <div class="telegram-channels">
-                    <a href="https://t.me/trilingual_natalie" target="_blank" class="telegram-btn">
-                        <i class="fab fa-telegram-plane"></i>
-                        <span>Английский</span>
-                        <span class="channel-name">@trilingual_natalie</span>
-                    </a>
-                    <a href="https://t.me/frenchC1" target="_blank" class="telegram-btn">
-                        <i class="fab fa-telegram-plane"></i>
-                        <span>Французский</span>
-                        <span class="channel-name">@frenchC1</span>
-                    </a>
+                <div class="english-visual">
+                    <img src="images/voice.png" alt="Voice" class="voice-img">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Telegram Channels -->
+    <section id="telegram" class="telegram">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Контакты</span>
-                <h2 class="section-title">Свяжитесь с нами</h2>
+            <h2 class="section-title">Бесплатная <span class="text-red">практика</span></h2>
+            <p class="section-subtitle">Подпишись на Telegram-каналы для ежедневной практики языка</p>
+            
+            <div class="telegram-grid">
+                <a href="https://t.me/trilingual_natalie" target="_blank" class="telegram-card tg-english">
+                    <h3>Английский</h3>
+                    <p>@trilingual_natalie</p>
+                    <span class="telegram-link">Подписаться →</span>
+                </a>
+                
+                <a href="https://t.me/frenchC1" target="_blank" class="telegram-card tg-french">
+                    <h3>Французский</h3>
+                    <p>@frenchC1</p>
+                    <span class="telegram-link">Подписаться →</span>
+                </a>
             </div>
-            <div class="contact-form-wrapper">
-                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xwvwbvoq" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Ваше имя" required>
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" name="phone" placeholder="Ваш телефон" required>
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="form-group">
-                        <i class="fas fa-language"></i>
-                        <div class="custom-select" data-name="language">
-                            <div class="custom-select-trigger">
-                                <span>Выберите язык</span>
-                                <i class="fas fa-chevron-down custom-arrow"></i>
-                            </div>
-                            <div class="custom-select-options">
-                                <div class="custom-option" data-value="english">Английский</div>
-                                <div class="custom-option" data-value="french">Французский</div>
-                                <div class="custom-option" data-value="spanish">Испанский</div>
-                                <div class="custom-option" data-value="german">Немецкий</div>
-                                <div class="custom-option" data-value="phonetics">Фонетический курс</div>
-                            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contacts" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Запишись на пробный урок</h2>
+                    <p class="contact-text">
+                        Оставь заявку, и я свяжусь с тобой в течение дня для обсуждения деталей
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <a href="tel:89896147738" class="contact-item">
+                            <span class="contact-label">Телефон</span>
+                            <span class="contact-value">8 (989) 614-77-38</span>
+                        </a>
+                        <a href="mailto:zelenskayanatalia55@gmail.com" class="contact-item">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">zelenskayanatalia55@gmail.com</span>
+                        </a>
+                        <div class="contact-item">
+                            <span class="contact-label">Адрес</span>
+                            <span class="contact-value">ул. Зявкина, 31</span>
                         </div>
-                        <input type="hidden" name="language" required>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label>Имя</label>
+                        <input type="text" placeholder="Как тебя зовут?" required>
                     </div>
                     <div class="form-group">
-                        <i class="fas fa-users"></i>
-                        <div class="custom-select" data-name="format">
-                            <div class="custom-select-trigger">
-                                <span>Формат занятий</span>
-                                <i class="fas fa-chevron-down custom-arrow"></i>
-                            </div>
-                            <div class="custom-select-options">
-                                <div class="custom-option" data-value="individual">Индивидуально</div>
-                                <div class="custom-option" data-value="group">В группе</div>
-                            </div>
-                        </div>
-                        <input type="hidden" name="format" required>
+                        <label>Телефон</label>
+                        <input type="tel" placeholder="+7 (___) ___-__-__" required>
                     </div>
-                    <div class="form-consent">
-                        <label>
-                            <input type="checkbox" name="consent" required>
-                            <span>Нажимая кнопку, вы соглашаетесь с <a href="privacy-policy.html" target="_blank">политикой обработки персональных данных</a></span>
-                        </label>
+                    <div class="form-group">
+                        <label>Язык</label>
+                        <select required>
+                            <option value="">Выбери язык</option>
+                            <option value="english">Английский</option>
+                            <option value="french">Французский</option>
+                            <option value="spanish">Испанский</option>
+                            <option value="german">Немецкий</option>
+                        </select>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-full">
-                        <span style="font-size: 1.1rem;">✦</span>
-                        Отправить заявку
-                    </button>
+                    <div class="form-group">
+                        <label>Формат</label>
+                        <select required>
+                            <option value="">Выбери формат</option>
+                            <option value="individual">Индивидуально</option>
+                            <option value="group">В группе</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Отправить заявку</button>
+                    <p class="form-privacy">
+                        Нажимая кнопку, вы соглашаетесь с 
+                        <a href="privacy-policy.html" target="_blank">политикой конфиденциальности</a>
+                    </p>
                 </form>
             </div>
         </div>
@@ -336,46 +271,30 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-about">
-                    <a href="#home" class="footer-logo">
-                        <span class="logo-icon">✦</span>
-                        <span class="logo-text">Natalie's School</span>
-                    </a>
-                    <p>Изучай языки с удовольствием! Английский, французский, испанский и немецкий с опытным преподавателем.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Контакты</h4>
-                    <ul>
-                        <li><a href="tel:89896147738"><i class="fas fa-phone"></i> 8 (989) 614-77-38</a></li>
-                        <li><a href="mailto:zelenskayanatalia55@gmail.com"><i class="fas fa-envelope"></i> zelenskayanatalia55@gmail.com</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i> ул. Зявкина, 31</li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Языки</h4>
-                    <ul>
-                        <li><a href="#languages">Английский</a></li>
-                        <li><a href="#languages">Французский</a></li>
-                        <li><a href="#languages">Испанский</a></li>
-                        <li><a href="#languages">Немецкий</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Соцсети</h4>
+                <div class="footer-brand">
+                    <a href="#top" class="logo">Natalie<span class="logo-accent">.</span></a>
+                    <p>Языковые курсы с душой. Учи английский, французский, испанский и немецкий с удовольствием!</p>
                     <div class="footer-social">
-                        <a href="https://t.me/trilingual_natalie" target="_blank" class="social-link">
-                            <i class="fab fa-telegram-plane"></i>
-                            <span>Английский</span>
-                        </a>
-                        <a href="https://t.me/frenchC1" target="_blank" class="social-link">
-                            <i class="fab fa-telegram-plane"></i>
-                            <span>Испанский</span>
-                        </a>
+                        <a href="https://t.me/trilingual_natalie" target="_blank">Telegram</a>
+                        <a href="tel:89896147738">8 (989) 614-77-38</a>
                     </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <p>ул. Зявкина, 31</p>
+                    <p>8 (989) 614-77-38</p>
+                    <p>zelenskayanatalia55@gmail.com</p>
+                </div>
+                <div class="footer-info">
+                    <h4>Информация</h4>
+                    <a href="#languages">Языки</a>
+                    <a href="#formats">Форматы занятий</a>
+                    <a href="#contacts">Записаться</a>
+                    <a href="privacy-policy.html" target="_blank">Политика конфиденциальности</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Natalie's School. | <a href="privacy-policy.html" style="color: var(--pink-400);">Политика конфиденциальности</a></p>
+                <p>© 2026 Natalie Languages. Все права защищены.</p>
             </div>
         </div>
     </footer>
